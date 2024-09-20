@@ -1,0 +1,66 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:FinXP-Ltd/flexcube-payments-api.git"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "finxp/flexcube-payments-api": "^v1.0.0",
+        "guzzlehttp/guzzle": "^7.9.2",
+        "laravel/framework": "^11.0",
+        "laravel/tinker": "^2.9.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23.1",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^8.1",
+        "phpunit/phpunit": "^11.3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "test": "vendor/bin/phpunit --configuration phpunit.xml"
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
