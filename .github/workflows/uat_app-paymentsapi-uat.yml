@@ -63,4 +63,4 @@ jobs:
           app-name: 'app-paymentsapi-uat'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2B560CFA1D824BEBB8F503B885439122 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0EE9281012B74EF297CC972C5062FFE0 }}
