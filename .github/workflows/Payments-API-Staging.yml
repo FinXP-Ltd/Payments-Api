@@ -44,4 +44,5 @@ jobs:
           app-name: 'app-paymentsapi-staging'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7EF8940295044D7A75943CED4AE9D61 }}
+          # publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F7EF8940295044D7A75943CED4AE9D61 }}
+          publish-profile: ${{ secrets.PAYMENTSAPI_STAGING_PUBLISHPROFILE }}
