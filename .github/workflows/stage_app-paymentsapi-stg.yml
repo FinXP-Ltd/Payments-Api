@@ -6,7 +6,7 @@ name:  app-paymentsapi-stg - Build and deploy PHP app to Azure Web App
 on:
   push:
     branches:
-      - stage
+      - none
   workflow_dispatch:
 
 jobs:
